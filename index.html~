@@ -1,0 +1,26 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" href="styles/wing.css"/>
+  </head>
+
+
+  <body>
+    <div class="row">
+      <div class="col-12">
+	<h2>Maciej Szymczak is</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+	<h4>Experience</h4>
+      </div>
+      <div class="col-4">
+	<h4>Profesal</h4>
+      </div>
+    </div>
+    
+
+  </body>
+
+</html>
