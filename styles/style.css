@@ -1,0 +1,66 @@
+body{
+    background-image: linear-gradient(90deg,#FFE1C7 0,#FFCEA3);
+}
+
+.container{
+    background-color: #fff;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,.2);
+    padding: 50px;
+}
+
+.text-muted{
+    color: #aaa;
+}
+
+
+/* lists */
+
+.list-item{
+    padding:0;
+    margin:0;
+    display: inline;
+}
+
+ul {
+    margin-top: 2.33em;
+    list-style: none;
+    padding:0;
+}
+
+li { 
+    padding-left: 1em; 
+    text-indent: -.7em;
+}
+
+li:before {
+    font-size: 2rem;
+    content: "• ";
+    color: #FF7A05; /* or whatever color you prefer */
+}
+
+/* links */
+
+a{
+    text-decoration: none;
+    color: inherit;
+    background-color: #FFF1E6;
+    -webkit-transition: background-color 0.5s; /* Safari */
+    transition: background-color 0.5s;
+}
+
+a:hover{
+    background-color: #FFE1C7;
+}
+
+
+/* menu */
+
+.menu a{
+    font-size: 1.8rem;
+    background-color: #fff;
+    transition: background-color 0.5s;
+}
+
+.menu a:hover{
+    background-color: #FFE1C7;
+}
