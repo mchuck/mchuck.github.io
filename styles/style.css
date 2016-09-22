@@ -12,6 +12,13 @@ body{
     color: #aaa;
 }
 
+.push-ul{
+    margin-top:2.12em;
+}
+
+.push-p{
+    margin-top:2.5em;
+}
 
 /* lists */
 
@@ -26,7 +33,6 @@ body{
 }
 
 ul {
-    margin-top: 2.1em;
     list-style: none;
     padding:0;
 }
