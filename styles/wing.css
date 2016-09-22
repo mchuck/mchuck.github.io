@@ -388,6 +388,10 @@ ol {
   text-align: center;
 }
 
+.text-justify{
+  text-align: justify;
+}
+
 .centered {
   position: fixed;
   top: 50%;
