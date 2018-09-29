@@ -1,6 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet"> 
     <style>
       
 
@@ -10,23 +11,22 @@
       }
 
       .top-box, .top-box a, .hint-box i, .top-box h1, .top-box h2 {
-      color: #fff;
-      opacity: 0.95;
+	  color: #fff;
+	  opacity: 0.95;
       }
 
 
-    
+      
       html, body{
 	  padding: 0;
 	  margin: 0;
-      font-family: "Open Sans", sans-serif;
-      color: #111;
+	  font-family: 'Roboto', sans-serif;
+	  color: #111;
       }
 
       h1,h2,h3,h4,h5,h6{
 	  margin: 0;
 	  padding: 0;
-	 /* letter-spacing: -0.06px;*/
 	  word-spacing: 0;
 	  text-transform: none;
       }
@@ -37,7 +37,7 @@
       	  height: 100%;
 	  width: 100%;
 	  position: absolute;
-      z-index: -1;
+	  z-index: -1;
       }
 
       .top-box{
@@ -87,47 +87,52 @@
           display: flex;
 	  flex-direction: column;
 	  justify-content: center;
-      align-items: center;
-      margin-top: 30px;
+	  align-items: center;
+	  margin-top: 30px;
       }
 
       .footer{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      padding-bottom: 10px;
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: center;
+	  padding-bottom: 10px;
+	  font-family: 'Inconsolata', monospace;
       }
 
       .card{
-      width: 33%;
-      padding: 20px;
-      box-shadow: 0 2px 5px rgba(100,100,100,.49);
+	  width: 33%;
+	  padding: 20px;
+	  box-shadow: 0 2px 5px rgba(100,100,100,.49);
       }
 
       .card h1{
-margin-bottom:10px;
+	  margin-bottom:10px;
       }
 
       .heart{
-      color: #f00;
-      margin-left: 5px;
-      margin-right: 5px;
+	  color: #f00;
+	  margin-left: 5px;
+	  margin-right: 5px;
       }
 
       .profile-contact{
-      display: flex;
+	  display: flex;
       }
 
       .profile-contact i {
-      margin-right: 10px;
+	  margin-right: 10px;
       }
 
       .card-paragraph{
-      margin-top:10px;
+	  margin-top:10px;
       }
 
       a {
-      text-decoration: none;
+	  text-decoration: none;
+      }
+
+      #scroll-btn{
+	  cursor: pointer;
       }
       
     </style>
@@ -146,15 +151,15 @@ margin-bottom:10px;
 	    <h4>Software Developer</h4>
 	    <h4>PhD student at Jagiellonian University</h4>
 	    <div class="profile-contact">
-	    <a href="https://github.com/alaiven"><i class="fa-2x fab fa-github-square"></i></a>
-	    <a href="https://www.linkedin.com/in/maciej-szymczak/"><i class="fa-2x fab fa-linkedin"></i></a>
+	      <a href="https://github.com/alaiven"><i class="fa-2x fab fa-github-square"></i></a>
+	      <a href="https://www.linkedin.com/in/maciej-szymczak/"><i class="fa-2x fab fa-linkedin"></i></a>
 	    </div>
 	  </div>
 	</div>
       </div>
     </div>
     <div class="hint-box">
-      <i style="margin-top10px;" class="fas fa-arrow-circle-down"></i>
+      <i style="margin-top10px;" id="scroll-btn" class="fas fa-arrow-circle-down"></i>
     </div>
 
     
@@ -162,34 +167,47 @@ margin-bottom:10px;
       <div class="card">
 	<h1>Teaching</h1>
 	<div class="card-parahraph">
-	<a href="https://github.com/Alaiven/EPiP"><h5>Effective programming in Python</h5></a>
-	<h6>Wednesday, 17:45, room 0053 </h6>
+	  <a href="https://github.com/Alaiven/EPiP"><h5>Effective programming in Python</h5></a>
+	  <h6>Wednesday, 17:45, room 0053 </h6>
 	</div>
 	<div class="card-paragraph">
-	<a href="https://github.com/Alaiven/AP"><h5>Abstract programming</h5></a>
-	<h6>Thursday - 18:00, room 0053</h6>
+	  <a href="https://github.com/Alaiven/AP"><h5>Abstract programming</h5></a>
+	  <h6>Thursday - 18:00, room 0053</h6>
 	</div>
 	<div class="card-paragraph">
-	<h5>Room</h5>
-	<h6>TBD</h6
+	  <h5>Room</h5>
+	  <h6>TBD</h6>
  	</div>
 	<div class="card-paragraph">
 	  <h5>Office hours</h5>
 	  <h6>Thursday</h6>
-	  </div>
 	</div>
- 
+      </div>
+      
     </div>
 
-    <div class="card-box">
+    <div class="card-box" id="scroll-target">
       <div class="footer">
-      <h5>made with</h5>
-      <i class="fa fa-heart heart"></i>
-      <h5>for GitHub Pages</h5>
-</div>
+	<h5>made with</h5>
+	<i class="fa fa-heart heart"></i>
+	<h5>for GitHub Pages</h5>
+      </div>
     </div>
-        
+    
 
   </body>
+
+  <script>
+
+    window.onload = function(){
+	var btn = document.getElementById("scroll-btn");
+	var target = document.getElementById("scroll-target");
+
+	btn.addEventListener('click', function(){
+	    target.scrollIntoView({behavior: 'smooth'});
+	})
+    }
+
+    </script>
 
 </html>
