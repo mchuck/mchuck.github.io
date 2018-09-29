@@ -1,21 +1,9 @@
 <html>
   <head>
+    <title>Maciej Szymczak</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet"> 
     <style>
-      
-
-      @keyframes example {
-	  from {opacity: 0}
-	  to {opacity: 1}
-      }
-
-      .top-box, .top-box a, .hint-box i, .top-box h1, .top-box h2 {
-	  color: #fff;
-	  opacity: 0.95;
-      }
-
-
       
       html, body{
 	  padding: 0;
@@ -23,13 +11,26 @@
 	  font-family: 'Roboto', sans-serif;
 	  color: #111;
       }
-
+      
       h1,h2,h3,h4,h5,h6{
 	  margin: 0;
 	  padding: 0;
 	  word-spacing: 0;
 	  text-transform: none;
       }
+
+      a {
+	  text-decoration: none;
+      }
+
+      .overlay {
+	  color: #fff;
+      }
+
+      .top-box, .top-box a, .top-box h1, .top-box h2 {
+	  color: #fff;
+	  opacity:0.95;
+      }   
       
       .background-box{
 	  background-image: url('back.jpg');
@@ -54,11 +55,16 @@
 	  justify-content:center;
       }
 
+      @keyframes fade-in {
+	  from {opacity: 0}
+	  to {opacity: 1}
+      }
+      
       .profile{
 	  display: flex;
 	  flex-direction: row;
 	  justify-content: space-around;
-	  animation-name: example;
+	  animation-name: fade-in;
 	  animation-duration: 1s;
       }
 
@@ -127,8 +133,12 @@
 	  margin-top:10px;
       }
 
-      a {
-	  text-decoration: none;
+      .overlay i {
+	  opacity: 0.2;
+      }
+
+      .overlay i:hover{
+	  opacity: inherit;
       }
 
       #scroll-btn{
@@ -142,24 +152,26 @@
   <body>
     <div class="background-box">
     </div>
-    <div class="top-box">
-      <div class="row-box">
-	<div class="profile">
-	  <img src="profile.jpg" class="profile-pic" />
-	  <div class="profile-data"> 
-	    <h2>Maciej Szymczak</h2>
-	    <h4>Software Developer</h4>
-	    <h4>PhD student at Jagiellonian University</h4>
-	    <div class="profile-contact">
-	      <a href="https://github.com/alaiven"><i class="fa-2x fab fa-github-square"></i></a>
-	      <a href="https://www.linkedin.com/in/maciej-szymczak/"><i class="fa-2x fab fa-linkedin"></i></a>
+    <div class="overlay">
+      <div class="top-box">
+	<div class="row-box">
+	  <div class="profile">
+	    <img src="profile.jpg" class="profile-pic" />
+	    <div class="profile-data"> 
+	      <h2>Maciej Szymczak</h2>
+	      <h4>Software Developer</h4>
+	      <h4>PhD student at Jagiellonian University</h4>
+	      <div class="profile-contact">
+		<a href="https://github.com/alaiven"><i class="fa-2x fab fa-github-square"></i></a>
+		<a href="https://www.linkedin.com/in/maciej-szymczak/"><i class="fa-2x fab fa-linkedin"></i></a>
+	      </div>
 	    </div>
 	  </div>
 	</div>
       </div>
-    </div>
-    <div class="hint-box">
-      <i style="margin-top10px;" id="scroll-btn" class="fas fa-arrow-circle-down"></i>
+      <div class="hint-box">
+	<i style="margin-top10px;" id="scroll-btn" class="fas fa-arrow-circle-down"></i>
+      </div>
     </div>
 
     
@@ -208,6 +220,6 @@
 	})
     }
 
-    </script>
+  </script>
 
 </html>
