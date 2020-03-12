@@ -27,7 +27,7 @@ a {
 }   
 
 .background-box{
-    background-image: url('back.jpg');
+    background-image: url('back2.jpg');
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -136,6 +136,15 @@ a {
     color: #f00;
     margin-left: 5px;
     margin-right: 5px;
+    padding-top: 3px;
+}
+
+.google {
+    font-size: 0.8em;
+    color: #2eaddb;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 2px;
 }
 
 .profile-contact{
