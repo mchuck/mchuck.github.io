@@ -3,167 +3,27 @@
     <title>Maciej Szymczak</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet"> 
-    <style>
-      
-      html, body{
-	  padding: 0;
-	  margin: 0;
-	  font-family: 'Roboto', sans-serif;
-	  color: #111;
-      }
-      
-      h1,h2,h3,h4,h5,h6{
-	  margin: 0;
-	  padding: 0;
-	  word-spacing: 0;
-	  text-transform: none;
-      }
-
-      a {
-	  text-decoration: none;
-      }
-
-      .overlay {
-	  color: #fff;
-      }
-
-      .top-box, .top-box a, .top-box h1, .top-box h2 {
-	  color: #fff;
-	  opacity:0.95;
-      }   
-      
-      .background-box{
-	  background-image: url('back.jpg');
-          background-size: cover;
-      	  height: 100%;
-	  width: 100%;
-	  position: absolute;
-	  z-index: -1;
-      }
-
-      .top-box{
-	  overflow: auto;
-	  height: 90vh;
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: center;
-      }
-
-      .row-box{
-	  display: flex;
-	  flex-direction: row;
-	  justify-content:center;
-      }
-
-      @keyframes fade-in {
-	  from {opacity: 0}
-	  to {opacity: 1}
-      }
-      
-      .profile{
-	  display: flex;
-	  flex-direction: row;
-	  justify-content: space-around;
-	  animation-name: fade-in;
-	  animation-duration: 1s;
-      }
-
-      .profile-pic{
-	  background-position: center;
-	  background-size: cover;
-	  background-image: url('profile.png');
-	  width: 120px;
-	  height: 120px;
-	  border-radius: 100%;
-	  margin-right: 15px;
-      }
-
-      .profile-data{
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: space-around;
-      }
-
-      .hint-box{
-	  height: 10vh;
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: center;
-	  align-items: center;
-      }
-
-      .card-box{
-          display: flex;
-	  flex-direction: column;
-	  justify-content: center;
-	  align-items: center;
-	  margin-top: 30px;
-      }
-
-      .footer{
-	  display: flex;
-	  flex-direction: row;
-	  justify-content: center;
-	  padding-bottom: 10px;
-	  font-family: 'Inconsolata', monospace;
-      }
-
-      .card{
-	  width: 33%;
-	  padding: 20px;
-	  box-shadow: 0 2px 5px rgba(100,100,100,.49);
-      }
-
-      .card h1{
-	  margin-bottom:10px;
-      }
-
-      .heart{
-	  color: #f00;
-	  margin-left: 5px;
-	  margin-right: 5px;
-      }
-
-      .profile-contact{
-	  display: flex;
-      }
-
-      .profile-contact i {
-	  margin-right: 10px;
-      }
-
-      .card-paragraph{
-	  margin-top:10px;
-      }
-
-      .overlay i {
-	  opacity: 0.5;
-      }
-
-      .overlay i:hover{
-	  opacity: inherit;
-      }
-
-      #scroll-btn{
-	  cursor: pointer;
-      }
-      
-    </style>
-
+    <link href="style.css" rel="stylesheet">
+    
   </head>
 
   <body>
     <div class="background-box">
     </div>
     <div class="overlay">
+      <div class="corona">
+	<div class="corona-text-box">
+	  <h5 class="corona-text">Given the current outbreak of COVID-19, are classes are being held remotely. Please, monitor the situation on the courses webpage and on the Pegaz platform.</h5>
+	</div>
+      </div>
       <div class="top-box">
 	<div class="row-box">
 	  <div class="profile">
 	    <div class="profile-pic"></div>
 	    <div class="profile-data"> 
-	      <h2>Maciej Szymczak</h2>
-	      <h4>Software Developer</h4>
-	      <h4>PhD student at Jagiellonian University</h4>
+	      <h3>Maciej Szymczak</h3>
+	      <h5>Software Developer</h5>
+	      <h6>PhD student at Jagiellonian University</h6>
 	      <div class="profile-contact">
 		<a href="https://github.com/mchuck"><i class="fa-2x fab fa-github-square"></i></a>
 		<a href="https://www.linkedin.com/in/maciej-szymczak/"><i class="fa-2x fab fa-linkedin"></i></a>
@@ -182,12 +42,12 @@
       <div class="card">
 	<h1>Teaching</h1>
 	<div class="card-parahraph">
-	  <h5>Effective programming in Python</h5>
-	  <h6>Wednesday, 17:45, room 0053 </h6>
+	  <a href="https://github.com/mchuck/MP/"><h5>Programming methods</h5></a>
+	  <h6>Friday, 08:25, room 0056 </h6>
 	</div>
 	<div class="card-paragraph">
 	  <a href="https://github.com/mchuck/AP"><h5>Abstract programming</h5></a>
-	  <h6>Thursday - 18:00, room 0053</h6>
+	  <h6>Course held in winter 2018</h6>
 	</div>
 	<div class="card-paragraph">
 	  <h5>Room</h5>
@@ -203,7 +63,7 @@
 
     <div class="card-box" id="scroll-target">
       <div class="footer">
-	<h5>made with</h5>
+	<h5>Made with</h5>
 	<i class="fa fa-heart heart"></i>
 	<h5>for GitHub Pages</h5>
       </div>

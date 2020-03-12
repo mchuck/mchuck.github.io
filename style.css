@@ -1,0 +1,164 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #111;
+    font-size:20px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+    word-spacing: 0;
+    text-transform: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.overlay {
+    color: #fff;
+}
+
+.top-box, .top-box a, .top-box h1, .top-box h2 {
+    color: #fff;
+    opacity:0.95;
+}   
+
+.background-box{
+    background-image: url('back.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.top-box{
+    overflow: auto;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row-box{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    animation-name: fade-in;
+    animation-duration: 1s;
+}
+
+.profile-pic{
+    background-position: center;
+    background-size: cover;
+    background-image: url('profile.png');
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+
+.profile-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hint-box{
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 10px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.card{
+    max-width: 768px;
+    width: 50%;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(100,100,100,.49);
+}
+
+.corona {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: rgba(208,51,13,1); 
+}
+
+.corona-text-box{
+    padding: 10px;
+    width:33%;
+}
+
+.corona-text{
+    text-align: justify;
+}
+
+.card h1{
+    margin-bottom:10px;
+}
+
+.heart{
+    font-size: 0.8em;
+    color: #f00;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.profile-contact{
+    display: flex;
+}
+
+.profile-contact i {
+    margin-right: 10px;
+}
+
+.card-paragraph{
+    margin-top:10px;
+}
+
+.overlay i {
+    opacity: 0.5;
+}
+
+.overlay i:hover{
+    opacity: inherit;
+}
+
+#scroll-btn{
+    cursor: pointer;
+}
+
